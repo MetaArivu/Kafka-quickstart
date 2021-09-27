@@ -12,7 +12,7 @@ This demo focus on following feature
 - How to use embeded kafka for unit testing
 
 ## Kafka Consumer
-This Deemo Focus on following features
+This Demo Focus on following features
 - Simple event consumer
 - Event consumer with consumer rercord, this will give you more information of message like Key, Partition, Offset etc
 - Event consumer with header, this will give you all the standard header and custom header information
