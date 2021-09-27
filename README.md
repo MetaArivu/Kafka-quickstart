@@ -1,4 +1,4 @@
-# Kafka Demo 
+# KAFKA Demo 
  
 Here we will focus on Kafka Producer and Consumer using Spring.
 
