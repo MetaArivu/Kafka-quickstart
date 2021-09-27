@@ -21,3 +21,10 @@ This Deemo Focus on following features
 - Concurrent Message Listener
 - Retry
 
+## License
+
+Copyright © [MetaMagic Global Inc](http://www.metamagicglobal.com/), 2021-22.  All rights reserved.
+
+Licensed under the [Apache 2.0](http://www.amexio.org/metamagic-showcase/license.html)  License.
+
+**Enjoy!**
