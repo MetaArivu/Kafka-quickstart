@@ -31,7 +31,7 @@ import org.springframework.kafka.test.utils.KafkaTestUtils;
 import org.springframework.test.context.TestPropertySource;
 
 import com.kafka.producer.model.UserCreatedEvent;
-import com.kafka.producer.service.UserServiceImpl;
+import com.kafka.producer.service.EventProducerServiceImpl;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -78,7 +78,7 @@ public class UserControllerTest1 {
 
 		HttpEntity<UserCreatedEvent> httpEntity = new HttpEntity<UserCreatedEvent>(userCreateEvent, header);
 
-		ResponseEntity<UserCreatedEvent> responseEntity = restTemplate.exchange("/api/v1/", HttpMethod.POST, httpEntity,
+		ResponseEntity<UserCreatedEvent> responseEntity = restTemplate.exchange("/api/v1/demo1", HttpMethod.POST, httpEntity,
 				UserCreatedEvent.class);
 
 		assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
