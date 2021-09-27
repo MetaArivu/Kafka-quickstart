@@ -50,12 +50,12 @@ public class KafkaConfig {
 		
 		//factory.setConcurrency(3); Enable this when you want to have concurrent kafka message listener
 		
-		factory.setErrorHandler((exp, data)->{
-			log.error("Exception = {}, While processing Message = {}",exp.getMessage(), data);
-		});
+		//factory.setErrorHandler((exp, data)->{
+		//	log.error("Exception = {}, While processing Message = {}",exp.getMessage(), data);
+		//});
 		
 		// This is Used for retry;
-		factory.setRetryTemplate(retryTemplate());
+		//factory.setRetryTemplate(retryTemplate());
 		
 		return factory;
 	}
