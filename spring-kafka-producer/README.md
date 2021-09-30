@@ -15,6 +15,9 @@ curl -X POST \
 	"dob":"2021-09-09"
 }'
 
+<img width="1670" alt="1" src="https://user-images.githubusercontent.com/23295769/135392505-8bfcb757-acfc-4708-91ea-dc862bb6ab25.png">
+
+
 
 ## Event Publisher with key
 This will publish event to user-event topic with key, this will publish event to same parition
@@ -31,6 +34,8 @@ curl -X POST \
 	"email":"John.Doe@gmail.com",
 	"dob":"2021-09-09"
 }'
+
+<img width="1677" alt="2" src="https://user-images.githubusercontent.com/23295769/135392504-a585fbcf-0fe2-402d-8979-b991bd3c1393.png">
 
 ## Event Publisher with callback method
 
@@ -49,6 +54,8 @@ curl -X POST \
 	"dob":"2021-09-09"
 }'
 
+<img width="1511" alt="3" src="https://user-images.githubusercontent.com/23295769/135392501-70697b45-a455-4bcc-88e3-d1996feab6c4.png">
+
 ## Publish event with headers
 
 Shows how you can add header when event is published.
@@ -66,6 +73,8 @@ curl -X POST \
 	"dob":"2021-09-09"
 }'
 
+<img width="1680" alt="4" src="https://user-images.githubusercontent.com/23295769/135392496-52825d30-1e4f-4dfa-9b48-2e75d3c3f405.png">
+
 ## Synchronous Event Publisher
 
 Shows how you can publish event in synchronous way
@@ -82,3 +91,5 @@ curl -X POST \
 	"email":"John.Doe@gmail.com",
 	"dob":"2021-09-09"
 }'
+
+<img width="1495" alt="5" src="https://user-images.githubusercontent.com/23295769/135392487-06c9b52a-c0a4-402e-9d48-4b04c23187a9.png">
