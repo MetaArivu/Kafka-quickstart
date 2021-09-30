@@ -4,7 +4,7 @@
 This will publish event to user-event Topic
 
 curl -X POST \
-  http://localhost:8081/api/v1/demo1 \
+  http://localhost:8081/api/v1/publish/simple \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: f9eb6205-3c22-5427-3be1-8f342dda0e45' \
@@ -20,7 +20,7 @@ curl -X POST \
 This will publish event to user-event topic with key, this will publish event to same parition
 
 curl -X POST \
-  http://localhost:8081/api/v1/demo2 \
+  http://localhost:8081/api/v1/publish/key \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 0f3ec9b6-8a14-b286-4e7f-023214d2f8d9' \
@@ -37,7 +37,7 @@ curl -X POST \
 Shows how you can hook callback once event is published
 
 curl -X POST \
-  http://localhost:8081/api/v1/demo3 \
+  http://localhost:8081/api/v1/publish/callback \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 77bcb3b6-cdc6-489d-32cc-abb29cc70380' \
@@ -54,7 +54,7 @@ curl -X POST \
 Shows how you can add header when event is published.
 
 curl -X POST \
-  http://localhost:8081/api/v1/demo4 \
+  http://localhost:8081/api/v1/publish/header \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: ce3ffbf2-a5df-1a3b-fd0f-456a3a453b1c' \
@@ -71,7 +71,7 @@ curl -X POST \
 Shows how you can publish event in synchronous way
 
 curl -X POST \
-  http://localhost:8081/api/v1/demo5 \
+  http://localhost:8081/api/v1/publish/sync \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 1128f9ba-fb28-2c2d-38a4-d72599d3ad90' \

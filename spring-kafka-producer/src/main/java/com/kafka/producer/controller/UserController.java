@@ -20,31 +20,31 @@ public class UserController {
 	@Autowired
 	private EventProducerService eventPrdSvc;
 	
-	@PostMapping("/demo1")
+	@PostMapping("/publish/simple")
 	public ResponseEntity<UserCreatedEvent> simpleEventPublisher(@RequestBody UserCreatedEvent userCreatedEvent){
 		userCreatedEvent = eventPrdSvc.simpleEventPublisher(userCreatedEvent);
 		return new ResponseEntity<UserCreatedEvent>(userCreatedEvent, HttpStatus.CREATED);
 	}
 	
-	@PostMapping("/demo2")
+	@PostMapping("/publish/key")
 	public ResponseEntity<UserCreatedEvent> eventPublisherWithKey(@RequestBody UserCreatedEvent userCreatedEvent){
 		userCreatedEvent = eventPrdSvc.eventPublisherWithKey(userCreatedEvent);
 		return new ResponseEntity<UserCreatedEvent>(userCreatedEvent, HttpStatus.CREATED);
 	}
 
-	@PostMapping("/demo3")
+	@PostMapping("/publish/callback")
 	public ResponseEntity<UserCreatedEvent> eventPublisherWithCallBack(@RequestBody UserCreatedEvent userCreatedEvent){
 		userCreatedEvent = eventPrdSvc.eventPublisherWithCallBack(userCreatedEvent);
 		return new ResponseEntity<UserCreatedEvent>(userCreatedEvent, HttpStatus.CREATED);
 	}
 	
-	@PostMapping("/demo4")
+	@PostMapping("/publish/header")
 	public ResponseEntity<UserCreatedEvent> eventPublisherWithHeader(@RequestBody UserCreatedEvent userCreatedEvent){
 		userCreatedEvent = eventPrdSvc.eventPublisherWithHeader(userCreatedEvent);
 		return new ResponseEntity<UserCreatedEvent>(userCreatedEvent, HttpStatus.CREATED);
 	}
 	
-	@PostMapping("/demo5")
+	@PostMapping("/publish/sync")
 	public ResponseEntity<UserCreatedEvent> synchronousEventPublisher(@RequestBody UserCreatedEvent userCreatedEvent){
 		userCreatedEvent = eventPrdSvc.synchronousEventPublisher(userCreatedEvent);
 		return new ResponseEntity<UserCreatedEvent>(userCreatedEvent, HttpStatus.CREATED);
