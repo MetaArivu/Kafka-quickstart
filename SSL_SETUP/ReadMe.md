@@ -42,3 +42,10 @@ openssl req -new -newkey rsa:4096 -days 365 -x509 -subj “/CN=kafka” -keyout 
 
 /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/bin/keytool -keystore kafka.server.keystore.jks -import -file cert-file-signed -storepass password -keypass password -noprompt
 
+
+
+
+
+
+
+
