@@ -3,7 +3,9 @@ package com.kafka.consumer.config;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.common.config.SslConfigs;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -33,6 +35,15 @@ public class KafkaConfig {
 		props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		props.put(ConsumerConfig.GROUP_ID_CONFIG, "user-event-group");
 
+		props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SSL");
+	       
+		props.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, "/Users/ketangote/self-signed-cert/client.truststore.jks");
+        props.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, "password");
+
+        props.put(SslConfigs.SSL_KEY_PASSWORD_CONFIG, "password");
+        props.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, "password");
+        props.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, "/Users/ketangote/self-signed-cert/server.keystore.jks");
+		
 		return props;
 	}
 
