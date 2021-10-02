@@ -1,5 +1,5 @@
 # Kafka SSL Setup
-Setup kafka withself signed certificate
+Setup kafka with self signed certificate
 
 #### 1. Create own private Certificate Authority (CA)
 
