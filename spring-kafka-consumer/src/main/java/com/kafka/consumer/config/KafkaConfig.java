@@ -34,6 +34,7 @@ public class KafkaConfig {
 		props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		props.put(ConsumerConfig.GROUP_ID_CONFIG, "user-event-group");
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest"); // When new consumer ID is found all messages will be consumed from start
 
 		props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SSL");
 	       
