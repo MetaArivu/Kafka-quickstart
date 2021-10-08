@@ -1,0 +1,12 @@
+{
+  "namespace": "com.kafka.producer.avro.model",
+  "type": "record",
+  "name": "UserCreatedEvent",
+  "fields": [
+    {"name": "id","type": ["null","string"]},
+    {"name": "firstName","type": ["null","string"]},
+    {"name": "lastName","type": ["null","string"]},
+    {"name": "email","type": ["null","string"]},
+    {"name": "dob","type": ["null","long"]}
+  ]
+}
