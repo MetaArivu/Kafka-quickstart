@@ -2,7 +2,7 @@
  
 Here we will focus on Kafka Producer and Consumer using Spring.
 
-## Kafka Producer 
+## 1: Kafka Producer 
 This demo focus on following feature
 - 1 Asynchronous Simple Event Publisher
 - 2 Event Publisher with key, this will  make sure event with same key goes to same partition
@@ -11,7 +11,7 @@ This demo focus on following feature
 - 5 Publish event in synchronous way
 - 6 How to use embeded kafka for unit testing
 
-## Kafka Consumer
+## 2: Kafka Consumer
 This Deemo Focus on following features
 - 1 Simple event consumer
 - 2 Event consumer with consumer rercord, this will give you more information of message like Key, Partition, Offset etc
@@ -20,6 +20,13 @@ This Deemo Focus on following features
 - 5 Manual Acknowledgement 
 - 6 Concurrent Message Listener
 - 7 Retry
+
+## 3: Setting Kafka With SSL
+This will cover how to configure KAFKA with SSL
+
+## 4: Schema Registry & AVRO
+This section focus on how to enable usage of Confluent Schema Registry and Avro serialization format in your Spring Boot applications.
+
 
 ## License
 
