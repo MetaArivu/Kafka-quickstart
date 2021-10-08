@@ -12,7 +12,8 @@ Using Avro schemas with schema registry, you can establish a data contract betwe
 
 - Check the AVRO [producer](https://github.com/MetaArivu/spring-kaka-examples/blob/main/schema-registry-with-avro/kafka-producer-avro/src/main/java/com/kafka/producer/config/KafkaConfig.java) and [consumer](https://github.com/MetaArivu/spring-kaka-examples/blob/main/schema-registry-with-avro/kafka-consumer-avro/src/main/java/com/kafka/consumer/config/KafkaConfig.java) configuration
 
-- Start Producer and publish event to kafka using below curl
+- Start Producer and publish event to kafka using below curl command
+
 curl -X POST
 http://localhost:8081/api/v1/publish/simple
 -H 'cache-control: no-cache'
