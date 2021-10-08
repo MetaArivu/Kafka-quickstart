@@ -1,8 +1,8 @@
 # Schema Registry & AVRO
 This section focus on how to enable usage of Confluent Schema Registry and Avro serialization format in your Spring Boot applications.
 
-https://www.confluent.io/product/confluent-platform/data-compatibility/
-https://avro.apache.org/docs/1.9.2/gettingstartedjava.html
+- https://www.confluent.io/product/confluent-platform/data-compatibility/
+- https://avro.apache.org/docs/1.9.2/gettingstartedjava.html
 
 Using Avro schemas with schema registry, you can establish a data contract between your microservices applications which communicate over kafka.
 
