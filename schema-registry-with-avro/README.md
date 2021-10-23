@@ -1,8 +1,8 @@
 # Schema Registry & AVRO
 This section focus on how to enable usage of Confluent Schema Registry and Avro serialization format in your Spring Boot applications.
 
-https://www.confluent.io/product/confluent-platform/data-compatibility/
-https://avro.apache.org/docs/1.9.2/gettingstartedjava.html
+- https://www.confluent.io/product/confluent-platform/data-compatibility/
+- https://avro.apache.org/docs/1.9.2/gettingstartedjava.html
 
 Using Avro schemas with schema registry, you can establish a data contract between your microservices applications which communicate over kafka.
 
@@ -12,7 +12,8 @@ Using Avro schemas with schema registry, you can establish a data contract betwe
 
 - Check the AVRO [producer](https://github.com/MetaArivu/spring-kaka-examples/blob/main/schema-registry-with-avro/kafka-producer-avro/src/main/java/com/kafka/producer/config/KafkaConfig.java) and [consumer](https://github.com/MetaArivu/spring-kaka-examples/blob/main/schema-registry-with-avro/kafka-consumer-avro/src/main/java/com/kafka/consumer/config/KafkaConfig.java) configuration
 
-- Start Producer and publish event to kafka using below curl
+- Start Producer and publish event to kafka using below curl command
+
 curl -X POST
 http://localhost:8081/api/v1/publish/simple
 -H 'cache-control: no-cache'
