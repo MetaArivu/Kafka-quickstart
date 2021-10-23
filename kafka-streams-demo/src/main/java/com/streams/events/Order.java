@@ -1,4 +1,4 @@
-package com.streams;
+package com.streams.events;
 
 public class Order {
 
