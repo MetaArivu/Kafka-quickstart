@@ -2,7 +2,7 @@ package com.streams.events;
 
 public class Order {
 
-	private String orderId;
+	private String id;
 	private Double total;
 
 	public Order() {
@@ -11,16 +11,16 @@ public class Order {
 
 	public Order(String orderId, Double total) {
 		super();
-		this.orderId = orderId;
+		this.id = orderId;
 		this.total = total;
 	}
 
-	public String getOrderId() {
-		return orderId;
+	public String getId() {
+		return id;
 	}
 
-	public void setOrderId(String orderId) {
-		this.orderId = orderId;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public Double getTotal() {
@@ -33,6 +33,6 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return this.orderId + "|" + this.total;
+		return this.id + "|" + this.total;
 	}
 }
