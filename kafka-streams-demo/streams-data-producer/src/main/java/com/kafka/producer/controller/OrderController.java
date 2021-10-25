@@ -29,6 +29,18 @@ public class OrderController {
 		return new ResponseEntity<OrderDetails>(event, HttpStatus.CREATED);
 	}
 	
+	@PostMapping("/publish/invalid")
+	public ResponseEntity<OrderDetails> publishInvalidOrder() {
+		OrderDetails event = eventPrdSvc.publishInvalidOrder();
+		return new ResponseEntity<OrderDetails>(event, HttpStatus.CREATED);
+	}
+	
+	@PostMapping("/publish/international")
+	public ResponseEntity<OrderDetails> publishInternationalOrder() {
+		OrderDetails event = eventPrdSvc.publishInternationalOrder();
+		return new ResponseEntity<OrderDetails>(event, HttpStatus.CREATED);
+	}
+	
 	 
 
 }

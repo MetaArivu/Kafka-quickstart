@@ -6,10 +6,16 @@ import org.springframework.cloud.stream.annotation.Output;
 
 import com.streams.events.OrderDetails;
 
-public interface OrderBinder {
+public interface OrderDetailsBinder {
 
-	@Input("order-input-channel")
+	@Input("order-details-input-channel")
 	public KStream<String, String> orderInputStream();
 	
+	@Output("india-order-channel")
+	public KStream<String, OrderDetails> indiaOrderInputStream();
+	
+	@Output("international-order-channel")
+	public KStream<String, OrderDetails> internationalOrderInputStream();	
+
 	
 }

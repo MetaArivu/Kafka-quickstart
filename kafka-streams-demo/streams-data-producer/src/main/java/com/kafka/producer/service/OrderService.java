@@ -6,4 +6,8 @@ public interface OrderService {
 
 	public OrderDetails publishOrder();
 
+	public OrderDetails publishInvalidOrder();
+
+	public OrderDetails publishInternationalOrder();
+
 }

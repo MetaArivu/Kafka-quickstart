@@ -21,7 +21,7 @@ import lombok.extern.log4j.Log4j2;
 @EnableBinding(value = OrderBinder.class)
 public class OrderService {
 
-	@StreamListener(value = "order-details-input-channel")
+	@StreamListener(value = "order-input-channel")
 	public void process(KStream<String, String> input) {
 
 		KStream<String, OrderDetails> orderStream = input.mapValues(ord -> applyLoyalty(ord));
@@ -34,17 +34,11 @@ public class OrderService {
 
 	private OrderDetails applyLoyalty(String _order) {
 		OrderDetails order = order(_order);
-		order.setTotal(order.getTotal() + (order.getTotal() / 10));
+		order.addLayoultyPoints();
 		return order;
 	}
 
 	private OrderDetails order(String _order) {
-		try {
-			return new ObjectMapper().readValue(_order, OrderDetails.class);
-		} catch (JsonProcessingException e) {
-			log.error("Error while parsing Order JSON, Exception=" + e.getMessage());
-			e.printStackTrace();
-			return null;
-		}
+		return OrderDetails.parse(_order);
 	}
 }

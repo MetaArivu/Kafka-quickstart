@@ -1,8 +1,12 @@
 package com.streams.events;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 import lombok.Data;
 
 @Data
+@JsonInclude(value = Include.NON_NULL)
 public class Address {
 
 	private String label;
@@ -13,4 +17,12 @@ public class Address {
 	private String county;
 	private String postalCode;
  
+	
+	public boolean isIndia() {
+		return this.getCounty()!=null && this.getCounty().equalsIgnoreCase("India");
+	}
+	
+	public boolean isInternational() {
+		return this.getCounty()!=null && !this.getCounty().equalsIgnoreCase("India");
+	}
 }

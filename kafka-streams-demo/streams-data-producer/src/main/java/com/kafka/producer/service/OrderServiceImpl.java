@@ -32,6 +32,22 @@ public class OrderServiceImpl implements OrderService {
 		return event;
 	}
 	
+	@Override
+	public OrderDetails publishInvalidOrder() {
+		OrderDetails event = orderDataBuilder.invalidOrderData();
+		kafkaTemplate.send("order-details", event.getId(), event);
+		log.info("Event Published with key = {} on Topic={}", event.getId(),"order-details");
+		return event;
+	}
+	
+	@Override
+	public OrderDetails publishInternationalOrder() {
+		OrderDetails event = orderDataBuilder.internationalOrderData();
+		kafkaTemplate.send("order-details", event.getId(), event);
+		log.info("Event Published with key = {} on Topic={}", event.getId(),"order-details");
+		return event;
+	}
+	
  
 	
 

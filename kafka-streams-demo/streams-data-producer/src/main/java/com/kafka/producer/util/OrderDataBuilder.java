@@ -1,5 +1,6 @@
 package com.kafka.producer.util;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -19,6 +20,16 @@ public class OrderDataBuilder {
 		return event;
 	}
 	
+	public OrderDetails invalidOrderData() {
+		OrderDetails event = new OrderDetails(UUID.randomUUID().toString(), new Date(), new ArrayList<LineItems>(), null);
+		return event;
+	}
+	
+	public OrderDetails internationalOrderData() {
+		OrderDetails event = new OrderDetails(UUID.randomUUID().toString(), new Date(), lineItems(), internationalAddress());
+		return event;
+	}
+	
 	private List<LineItems> lineItems(){
 		return Arrays.asList(
 				new LineItems("item-1", "IPhone 13", 1, 130000d),
@@ -29,5 +40,9 @@ public class OrderDataBuilder {
 	
 	private Address address() {
 		return new Address("Home", "E205, East Street Park", "MG Road", "Pune", "MH", "India", "411028");
+	}
+	
+	private Address internationalAddress() {
+		return new Address("Home", "E205, East Street Park", "Times Square", "MY", "NY", "US", "12WE56");
 	}
 }

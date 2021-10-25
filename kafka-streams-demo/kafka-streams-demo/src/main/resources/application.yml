@@ -2,8 +2,14 @@ spring:
   cloud:
     stream:
       bindings:
+        order-input-channel:
+          destination: order-details
         order-details-input-channel:
           destination: order-details
+        india-order-channel:
+          destination: india-order-details
+        international-order-channel:
+          destination: international-order-details
       kafka:
         streams:
           binder:
@@ -11,4 +17,5 @@ spring:
             configuration:
               schema.registry.url: http://localhost:8081
               processing.guarantee: exactly_once
+        
               
