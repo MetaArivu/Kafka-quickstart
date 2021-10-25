@@ -11,12 +11,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class UserCreatedEvent {
+public class OrderEvent {
 
 	private String id;
-	private String firstName;
-	private String lastName;
-	private String email;
-	private Date dob;
+	private Double total;
 	
 }

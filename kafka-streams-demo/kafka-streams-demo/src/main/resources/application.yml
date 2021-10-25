@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        order-input-channel:
+          destination: orders-event
+      kafka:
+        streams:
+          binder:
+            brokers:  localhost:9092
+            configuration:
+              schema.registry.url: http://localhost:8081
+              processing.guarantee: exactly_once
+              
+#spring.kafka.consumer.properties.spring.json.trusted.packages=com.myapp
+#spring.kafka.consumer.value-deserializer=org.springframework.kafka.support.serializer.JsonDeserializer              

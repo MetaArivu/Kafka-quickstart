@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
-import com.kafka.producer.model.UserCreatedEvent;
+import com.kafka.producer.model.OrderEvent;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,12 +13,12 @@ import lombok.extern.slf4j.Slf4j;
 public class EventPublisherWithKey {
 
 	@Autowired
-	private KafkaTemplate<String, UserCreatedEvent> kafkaTemplate;
+	private KafkaTemplate<String, OrderEvent> kafkaTemplate;
 	
 	
-	public UserCreatedEvent pushlishEvent(UserCreatedEvent userCreatedEvent) {
-		kafkaTemplate.send("user-event", userCreatedEvent.getId(), userCreatedEvent);
-		log.info("2: Event Published with key = {}", userCreatedEvent.getId());
-		return userCreatedEvent;
+	public OrderEvent pushlishEvent(OrderEvent event) {
+		kafkaTemplate.send("orders-event", event.getId(), event);
+		log.info("Event Published with key = {} on Topic={}", event.getId(),"orders-event");
+		return event;
 	}
 }

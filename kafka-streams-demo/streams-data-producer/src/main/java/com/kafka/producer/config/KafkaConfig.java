@@ -15,7 +15,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
-import com.kafka.producer.model.UserCreatedEvent;
+import com.kafka.producer.model.OrderEvent;
 
 @Configuration
 public class KafkaConfig {
@@ -31,26 +31,16 @@ public class KafkaConfig {
 		props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
 		props.put(ProducerConfig.ACKS_CONFIG, "all");
 		props.put(ProducerConfig.RETRIES_CONFIG, 10);
-		
-		props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SSL");
-       
-		props.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, "/Users/ketangote/self-signed-cert/client.truststore.jks");
-        props.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, "password");
-
-        props.put(SslConfigs.SSL_KEY_PASSWORD_CONFIG, "password");
-        props.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, "password");
-        props.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, "/Users/ketangote/self-signed-cert/server.keystore.jks");
-		
 		return props;
 	}
 
 	@Bean
-	public ProducerFactory<String, UserCreatedEvent> producerFactory() {
+	public ProducerFactory<String, OrderEvent> producerFactory() {
 		return new DefaultKafkaProducerFactory<>(producerConfigs());
 	}
 
 	@Bean
-	public KafkaTemplate<String, UserCreatedEvent> kafkaTemplate() {
+	public KafkaTemplate<String, OrderEvent> kafkaTemplate() {
 		return new KafkaTemplate<>(producerFactory());
 	}
 }

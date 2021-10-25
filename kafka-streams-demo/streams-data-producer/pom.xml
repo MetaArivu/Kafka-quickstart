@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kafka.producer</groupId>
-	<artifactId>spring-kafka-producer</artifactId>
+	<artifactId>streams-data-producer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-kafka-producer</name>
-	<description>Spring Kafka Producer Demo</description>
+	<name>streams-data-producer</name>
+	<description>Streams Data Producer Demo</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

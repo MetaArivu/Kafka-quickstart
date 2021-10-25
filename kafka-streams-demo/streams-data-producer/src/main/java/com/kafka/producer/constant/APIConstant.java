@@ -2,5 +2,5 @@ package com.kafka.producer.constant;
 
 public class APIConstant {
 
-	public static final String USER_VERSION = "/api/v1";
+	public static final String API_VERSION = "/api/v1";
 }
