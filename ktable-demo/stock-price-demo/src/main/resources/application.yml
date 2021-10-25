@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        stock-input-channel:
+          destination: stock-tick-topic
+      kafka:
+        streams:
+          binder:
+            brokers:  localhost:9092
+            configuration:
+              commit.interval.ms: 10000
+              state.dir: state-store
+          bindings:
+            stock-input-channel:
+              consumer:
+                materializedAs: stock-input-store
+
