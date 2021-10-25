@@ -2,8 +2,8 @@ spring:
   cloud:
     stream:
       bindings:
-        order-input-channel:
-          destination: orders-event
+        order-details-input-channel:
+          destination: order-details
       kafka:
         streams:
           binder:

@@ -15,7 +15,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
-import com.kafka.producer.model.OrderEvent;
+import com.kafka.producer.model.OrderDetails;
 
 @Configuration
 public class KafkaConfig {
@@ -35,12 +35,12 @@ public class KafkaConfig {
 	}
 
 	@Bean
-	public ProducerFactory<String, OrderEvent> producerFactory() {
+	public ProducerFactory<String, OrderDetails> producerFactory() {
 		return new DefaultKafkaProducerFactory<>(producerConfigs());
 	}
 
 	@Bean
-	public KafkaTemplate<String, OrderEvent> kafkaTemplate() {
+	public KafkaTemplate<String, OrderDetails> kafkaTemplate() {
 		return new KafkaTemplate<>(producerFactory());
 	}
 }
