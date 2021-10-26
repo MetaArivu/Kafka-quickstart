@@ -1,0 +1,6 @@
+/Users/ketangote/workspace_learning/spring-kafka-examples/shopping-cart-cqrs-es/shopping.cart.aggregator/src/main/java/com/streams/service/LineItems.java
+/Users/ketangote/workspace_learning/spring-kafka-examples/shopping-cart-cqrs-es/shopping.cart.aggregator/src/main/java/com/streams/service/CartAggregateService.java
+/Users/ketangote/workspace_learning/spring-kafka-examples/shopping-cart-cqrs-es/shopping.cart.aggregator/src/main/java/com/streams/StreamsDemoApplication.java
+/Users/ketangote/workspace_learning/spring-kafka-examples/shopping-cart-cqrs-es/shopping.cart.aggregator/src/main/java/com/streams/service/ShoppingCart.java
+/Users/ketangote/workspace_learning/spring-kafka-examples/shopping-cart-cqrs-es/shopping.cart.aggregator/src/main/java/com/streams/service/CustomerCartEvent.java
+/Users/ketangote/workspace_learning/spring-kafka-examples/shopping-cart-cqrs-es/shopping.cart.aggregator/src/main/java/com/streams/service/CartBinder.java
