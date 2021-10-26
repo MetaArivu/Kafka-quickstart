@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        employee-input-channel:
+          destination: employee-topic
+      kafka:
+        streams:
+          binder:
+            brokers:  localhost:9092
+            configuration:
+              commit.interval.ms: 5000
+              state.dir: employee-department-store
+              
+          
+
