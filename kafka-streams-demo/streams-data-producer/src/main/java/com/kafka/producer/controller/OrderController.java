@@ -36,6 +36,12 @@ public class OrderController {
 		return new ResponseEntity<OrderDetails>(event, HttpStatus.CREATED);
 	}
 	
+	@PostMapping("/publish/customer/{id}/noaddress")
+	public ResponseEntity<OrderDetails> publishOrderWithoutAddress(@PathVariable("id") String id) {
+		OrderDetails event = eventPrdSvc.withoutAddressOrderData(id);
+		return new ResponseEntity<OrderDetails>(event, HttpStatus.CREATED);
+	}
+	
 	@PostMapping("/publish/invalid")
 	public ResponseEntity<OrderDetails> publishInvalidOrder() {
 		OrderDetails event = eventPrdSvc.publishInvalidOrder();

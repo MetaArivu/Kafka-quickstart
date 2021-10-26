@@ -1,0 +1,7 @@
+com/ktable/model/Address.class
+com/ktable/service/OrderBinder.class
+com/ktable/model/LineItems.class
+com/ktable/model/OrderDetails.class
+com/ktable/service/OrderService.class
+com/ktable/KTableDemoApplication.class
+com/ktable/model/Customer.class

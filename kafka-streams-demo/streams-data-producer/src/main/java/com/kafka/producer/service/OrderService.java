@@ -11,4 +11,6 @@ public interface OrderService {
 	public OrderDetails publishInternationalOrder();
 
 	public OrderDetails publishOrderWithCustomerId(String id);
+
+	public OrderDetails withoutAddressOrderData(String id);
 }
