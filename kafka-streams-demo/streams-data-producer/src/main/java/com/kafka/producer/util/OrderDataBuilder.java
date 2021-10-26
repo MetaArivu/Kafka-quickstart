@@ -30,6 +30,12 @@ public class OrderDataBuilder {
 		return event;
 	}
 	
+	public OrderDetails orderDataWithCustomerId(String id) {
+		OrderDetails event = new OrderDetails(id!=null ? id: UUID.randomUUID().toString(), new Date(), lineItems(), address());
+		return event;
+	}
+	
+	
 	private List<LineItems> lineItems(){
 		return Arrays.asList(
 				new LineItems("item-1", "IPhone 13", 1, 130000d),

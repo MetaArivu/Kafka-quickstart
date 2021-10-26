@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        word-count-input-channel:
+          destination: word-count-topic
+      kafka:
+        streams:
+          binder:
+            brokers:  localhost:9092
+            configuration:
+              commit.interval.ms: 5000
+              state.dir: word-count-store
+              default:
+                key:
+                  serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+                value:
+                  serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+          
+

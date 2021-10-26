@@ -48,6 +48,14 @@ public class OrderServiceImpl implements OrderService {
 		return event;
 	}
 	
+	@Override
+	public OrderDetails publishOrderWithCustomerId(String id) {
+		OrderDetails event = orderDataBuilder.orderDataWithCustomerId(id);
+		kafkaTemplate.send("order-details", event.getId(), event);
+		log.info("Event Published with key = {} on Topic={}", event.getId(),"order-details");
+		return event;
+	}
+	
  
 	
 

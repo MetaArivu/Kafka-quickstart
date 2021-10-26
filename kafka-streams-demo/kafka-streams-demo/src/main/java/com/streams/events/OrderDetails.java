@@ -27,12 +27,15 @@ public class OrderDetails {
 
 	private Address addrress;
 
-	private Double total;
+	private double total;
  
-	private Double layoultyPoints;
+	private double layoultyPoints;
+	
+	private double totalLayoultyPoints;
 	
 	public void addLayoultyPoints() {
 		layoultyPoints = getTotal() + (getTotal() / 10);
+		totalLayoultyPoints = layoultyPoints;
 	}
 	
 	public static OrderDetails parse(String _order) {
