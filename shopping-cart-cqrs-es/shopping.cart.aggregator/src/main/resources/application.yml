@@ -4,6 +4,10 @@ spring:
       bindings:
         cart-input-channel:
           destination: cart-events
+        product-input-channel:
+          destination: product-details-events
+        cart-details-input-channel:
+          destination: cart-details-event  
       kafka:
         streams:
           binder:

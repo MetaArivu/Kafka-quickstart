@@ -20,6 +20,8 @@ public class CartEvent {
 
 	private String customerId;
 	private String itemId;
+	private String itemName;
+	private double price;
 	private int qty;
 	private EventType eventType;
 
@@ -35,7 +37,6 @@ public class CartEvent {
 
 	@Override
 	public String toString() {
-		return "CustomerCartEvent [customerId=" + customerId + ", itemId=" + itemId + ", qty=" + qty + ", eventType="
-				+ eventType + "]";
+		return customerId+"|"+itemId+"|"+itemName+"|"+price+"|"+qty+"|"+eventType;
 	}
 }

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
@@ -38,13 +39,13 @@ public class ShoppingCart {
 			return this;
 		}
 
-		public Builder addLineItem(String itemId, int qty) {
+		public Builder addLineItem(String itemId, String itemName, int qty, double price) {
 			int prevQty = 0;
 			LineItems lineItem = lineItemsMap.get(itemId);
-			if(lineItem!=null && qty>0) {
+			if (lineItem != null && qty > 0) {
 				prevQty = lineItem.getQty();
 			}
-			lineItemsMap.put(itemId, new LineItems(itemId, prevQty+qty));
+			lineItemsMap.put(itemId, new LineItems(itemId, itemName, prevQty + qty, price));
 			return this;
 		}
 
@@ -55,6 +56,7 @@ public class ShoppingCart {
 		public ShoppingCart build() {
 			return new ShoppingCart(customerId, getLineItems());
 		}
+
 	}
 
 	public String getCustomerId() {
@@ -78,6 +80,18 @@ public class ShoppingCart {
 	@Override
 	public String toString() {
 		return toJson();
+	}
+
+	public static ShoppingCart parse(String v) {
+		try {
+			return new ObjectMapper().readValue(v, ShoppingCart.class);
+		} catch (JsonMappingException e) {
+			e.printStackTrace();
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+
+		return null;
 	}
 
 }

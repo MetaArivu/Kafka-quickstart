@@ -15,13 +15,13 @@ public class CartEventHandler {
 			return new ShoppingCart.Builder()
 			   		.customerId(event.getCustomerId())
 			   		.lineItems(shoppingCart.getLineItems())
-			   		.addLineItem(event.getItemId(),event.getQty())
+			   		.addLineItem(event.getItemId(), event.getItemName(), event.getQty(), event.getPrice())
 			   		.build();
 		case REMOVE_ITEM:
 			return new ShoppingCart.Builder()
 			   		.customerId(event.getCustomerId())
 			   		.lineItems(shoppingCart.getLineItems())
-			   		.addLineItem(event.getItemId(),event.getQty())
+			   		.addLineItem(event.getItemId(), event.getItemName(), event.getQty(), event.getPrice())
 			   		.build();
 		case CLEAR_CART:
 			return new ShoppingCart.Builder()
