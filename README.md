@@ -35,7 +35,7 @@ This section focus on how to use KStream
 - 3 Handling Business Error
 - 4 Branching
 - 5 Reducing
-- 6 Aggreegation
+- 6 Aggregation
 - 7 Joining KStreams and Global Table
 
 ## 6: [KTable](https://github.com/MetaArivu/spring-kaka-examples/tree/main/06-kafka-ktable-demo)
