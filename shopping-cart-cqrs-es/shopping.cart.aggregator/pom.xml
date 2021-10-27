@@ -50,12 +50,7 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-
-		<dependency>
-			<groupId>shopping.cart.core</groupId>
-			<artifactId>shopping.cart.core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
+ 
 
 	</dependencies>
 	<dependencyManagement>

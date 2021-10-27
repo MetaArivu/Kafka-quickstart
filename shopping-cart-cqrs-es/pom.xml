@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>shopping.cart.core</module>
         <module>shopping.cart.cmd</module>
         <module>shopping.cart.aggregator</module>
     </modules>
