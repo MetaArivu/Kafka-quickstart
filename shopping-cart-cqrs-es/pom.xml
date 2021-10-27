@@ -11,6 +11,7 @@
 
     <modules>
         <module>shopping.cart.cmd</module>
+        <module>shopping.cart.query</module>
         <module>shopping.cart.aggregator</module>
     </modules>
 </project>

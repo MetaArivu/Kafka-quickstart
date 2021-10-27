@@ -1,4 +1,4 @@
-package com.shopping.cart.cmd.config;
+package com.shopping.cart.config;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +14,7 @@ import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
 import com.shopping.cart.event.CartEvent;
+
 
 
 @Configuration
