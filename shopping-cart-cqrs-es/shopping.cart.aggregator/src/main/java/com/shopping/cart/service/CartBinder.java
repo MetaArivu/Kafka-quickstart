@@ -1,4 +1,4 @@
-package com.streams.service;
+package com.shopping.cart.service;
 
 import org.apache.kafka.streams.kstream.KStream;
 import org.springframework.cloud.stream.annotation.Input;

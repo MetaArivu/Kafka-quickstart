@@ -1,8 +1,7 @@
-package com.streams.service;
+package com.shopping.cart.event;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.shopping.cart.event.EventType;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,16 +16,16 @@ import lombok.extern.slf4j.Slf4j;
 @Setter
 @Builder
 @Slf4j
-public class CustomerCartEvent {
+public class CartEvent {
 
 	private String customerId;
 	private String itemId;
 	private int qty;
 	private EventType eventType;
 
-	public static CustomerCartEvent parse(String _event) {
+	public static CartEvent parse(String _event) {
 		try {
-			return new ObjectMapper().readValue(_event, CustomerCartEvent.class);
+			return new ObjectMapper().readValue(_event, CartEvent.class);
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 			log.error("Error while parsing CustomerCartEvent, Exception=" + e.getMessage());

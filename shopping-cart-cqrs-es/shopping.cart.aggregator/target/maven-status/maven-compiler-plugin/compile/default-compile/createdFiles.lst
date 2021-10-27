@@ -1,3 +1,1 @@
-com/streams/StreamsDemoApplication.class
-com/streams/service/CartAggregateService.class
-com/streams/service/CartBinder.class
+com/shopping/cart/service/CartEventHandler$1.class

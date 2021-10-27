@@ -1,24 +1,24 @@
-package com.streams.service;
+package com.shopping.cart.event;
 
 public class LineItems {
 
 	private String itemId;
 	private int qty;
 
+	public LineItems() {
+		
+	}
+	public LineItems(String _itemId, int qty) {
+		this.itemId = _itemId;
+		this.qty = qty;
+	}
+
 	public String getItemId() {
 		return itemId;
 	}
 
-	public void setItemId(String itemId) {
-		this.itemId = itemId;
-	}
-
 	public int getQty() {
 		return qty;
-	}
-
-	public void setQty(int qty) {
-		this.qty = qty;
 	}
 
 	@Override
@@ -26,5 +26,4 @@ public class LineItems {
 		return "LineItems [itemId=" + itemId + ", qty=" + qty + "]";
 	}
 
-	
 }

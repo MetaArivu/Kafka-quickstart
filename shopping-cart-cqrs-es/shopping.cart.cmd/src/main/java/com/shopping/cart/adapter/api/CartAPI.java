@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.shopping.cart.command.AddItemCommand;
+import com.shopping.cart.command.CheckOutCommand;
+import com.shopping.cart.command.ClearCartCommand;
 import com.shopping.cart.command.RemoveItemCommand;
 import com.shopping.cart.domainlayer.service.CartService;
+import com.shopping.cart.event.ClearCartEvent;
 import com.shopping.cart.exception.ServiceException;
 
 @RestController
@@ -33,4 +36,17 @@ public class CartAPI {
 		cartService.removeItem(removeItem);
 		return new ResponseEntity(HttpStatus.OK);
 	}
+
+	@PostMapping("/checkout")
+	public ResponseEntity addItem(@RequestBody CheckOutCommand checkOut) throws ServiceException {
+		cartService.checkOut(checkOut);
+		return new ResponseEntity(HttpStatus.OK);
+	}
+
+	@PostMapping("/clear")
+	public ResponseEntity addItem(@RequestBody ClearCartCommand clearCart) throws ServiceException {
+		cartService.clearCart(clearCart);
+		return new ResponseEntity(HttpStatus.OK);
+	}
+
 }

@@ -1,13 +1,13 @@
-package com.streams;
+package com.shopping.cart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StreamsDemoApplication {
+public class ShoppingCartAgggregator {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StreamsDemoApplication.class, args);
+		SpringApplication.run(ShoppingCartAgggregator.class, args);
 	}
 
 }
