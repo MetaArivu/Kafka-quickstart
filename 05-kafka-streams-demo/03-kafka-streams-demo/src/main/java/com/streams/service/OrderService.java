@@ -27,9 +27,11 @@ public class OrderService {
 	@StreamListener(value = "order-input-channel")
 	public void process(KStream<String, String> input) {
 
-		KStream<String, OrderDetails> orderStream = input.mapValues(ord -> applyLoyalty(ord));
+		KStream<String, OrderDetails> orderStream = input
+				.peek((k, v) -> log.info("Data Received Key={}, Value={}", k, v))
+				.mapValues(ord -> applyLoyalty(ord));
 
-		orderStream.foreach((k, v) -> log.info("Key={}, Value={}", k, v));
+		orderStream.foreach((k, v) -> log.info("Data Publish Key={}, Value={}", k, v));
 
 		orderStream.to("loyalty-topic", Produced.with(Serdes.String(), new JsonSerde<>(OrderDetails.class)));
 
