@@ -1,4 +1,4 @@
-# Working with KStream
+# Advance feeatures of KStream
 
 Previously we seen how to work with KStream. In this demo we will focus on some advance feature like 
 - How to send data to another Topic without defining OutPut Channel in YML
@@ -35,4 +35,4 @@ Previously we seen how to work with KStream. In this demo we will focus on some 
     - bff924f9-0837-4ab0-951b-8c397fd9c6d4:{"id":"bff924f9-0837-4ab0-951b-8c397fd9c6d4","customerId":"79b96745-e9ca-40f6-b867-62ab96195c98","date":1635399776069,"lineItems":[{"itemId":"item-1","item":"IPhone 13","qty":1,"price":130000,"total":130000},{"itemId":"item-1","item":"MacBook Pro 15","qty":1,"price":230000,"total":230000},{"itemId":"item-1","item":"Airpod","qty":1,"price":24000,"total":24000}],"addrress":{"label":"Home","address1":"E205, East Street Park","address2":"MG Road","city":"Pune","province":"MH","county":"India","postalCode":"411028"},"total":384000}
     - bff924f9-0837-4ab0-951b-8c397fd9c6d4:{"id":"bff924f9-0837-4ab0-951b-8c397fd9c6d4","customerId":"79b96745-e9ca-40f6-b867-62ab96195c98","date":1635399776069,"lineItems":[{"itemId":"item-1","item":"IPhone 13","qty":1,"price":130000,"total":130000},{"itemId":"item-1","item":"MacBook Pro 15","qty":1,"price":230000,"total":230000},{"itemId":"item-1","item":"Airpod","qty":1,"price":24000,"total":24000}],"addrress":{"label":"Home","address1":"E205, East Street Park","address2":"MG Road","city":"Pune","province":"MH","county":"US","postalCode":"411028"},"total":384000}
   - First message will be streamed on india-order-details topic and second message will be streamed to international-order-details topic. Branching is happening based on incoming order details country attribute.
-  
+
