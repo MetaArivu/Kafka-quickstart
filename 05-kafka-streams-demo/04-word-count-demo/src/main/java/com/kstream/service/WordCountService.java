@@ -1,4 +1,4 @@
-package com.ktable.service;
+package com.kstream.service;
 
 import java.util.Arrays;
 
@@ -30,7 +30,7 @@ public class WordCountService {
 			 .toStream()
 			 //.map((k,v)-> KeyValue.pair(k, v.toString()))
 			 //.to("aggregate-word-count-topic", Produced.with(Serdes.String(),Serdes.String()));
-			 .foreach((k, v) -> System.out.println("Key = " + k + " Value = " + v));
+			 .foreach((k, v) -> log.info("Key = {},  Value = {}", k, v));
 
 	}
 

@@ -1,4 +1,4 @@
-package com.ktable.service;
+package com.kstream.service;
 
 import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.KTable;

@@ -1,13 +1,13 @@
-package com.ktable;
+package com.kstream;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KTableDemoApplication {
+public class WordCountApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KTableDemoApplication.class, args);
+		SpringApplication.run(WordCountApplication.class, args);
 	}
 
 }
