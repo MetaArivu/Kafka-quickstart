@@ -14,8 +14,8 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.kafka.support.serializer.JsonSerde;
 import org.springframework.stereotype.Service;
 
-import com.ktabel.model.Department;
-import com.ktabel.model.Employee;
+import com.ktable.events.Department;
+import com.ktable.events.Employee;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -31,7 +31,7 @@ public class EmployeeService {
 			input
 				.mapValues(Employee::instance)
 				.map((k,v)-> KeyValue.pair(v.getEmpId(), v))
-				.peek((k,v)-> log.info("Key={}, Value={}",k,v))
+				.peek((k,v)-> log.debug("Key={}, Value={}",k,v))
 				.toTable(Materialized.with(Serdes.String(), new JsonSerde<>(Employee.class)))
 				.groupBy((k,v) -> KeyValue.pair(v.getDeptId(), v),
 						Grouped.with(Serdes.String(),new JsonSerde<>(Employee.class)))

@@ -1,7 +1,7 @@
 package com.ktable.service;
 
-import com.ktabel.model.Department;
-import com.ktabel.model.Employee;
+import com.ktable.events.Department;
+import com.ktable.events.Employee;
 
 public class DepartmentBuilder {
 

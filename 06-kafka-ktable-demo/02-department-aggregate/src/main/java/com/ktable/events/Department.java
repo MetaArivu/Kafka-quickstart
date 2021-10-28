@@ -1,4 +1,4 @@
-package com.ktabel.model;
+package com.ktable.events;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,7 +25,6 @@ public class Department {
 		this.totalSalary = totalSalary;
 		this.noOfEmp = noOfEmp;
 		this.avgSalary = avgSalary;
-		System.out.println(this);
 	}
 
 
