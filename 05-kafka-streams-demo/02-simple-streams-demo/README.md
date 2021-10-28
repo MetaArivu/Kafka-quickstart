@@ -1,6 +1,7 @@
 # Working with KStream
 
-This demo focus of how you can configure KStream application using Spring. Heree we will configure input stream i.e streaming event from some topic, once event is consumed it will be enriched and will stream to another topic.
+This demo focus of how you can configure KStream application using Spring. Here we will configure input stream i.e streaming event from some topic, once event is consumed it will be enriched and will stream to another topic.
+
 
 For demo we will consume order data which consist of TOTAL amount, based on TOTAL amount loyalty points will be calculated and it will be stream to another topic.
 
