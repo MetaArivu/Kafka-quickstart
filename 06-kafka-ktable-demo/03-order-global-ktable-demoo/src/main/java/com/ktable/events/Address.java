@@ -1,4 +1,4 @@
-package com.ktable.model;
+package com.ktable.events;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

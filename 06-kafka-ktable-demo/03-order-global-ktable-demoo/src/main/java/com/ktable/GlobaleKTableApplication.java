@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KTableDemoApplication {
+public class GlobaleKTableApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KTableDemoApplication.class, args);
+		SpringApplication.run(GlobaleKTableApplication.class, args);
 	}
 
 }

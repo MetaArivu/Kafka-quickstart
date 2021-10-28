@@ -1,4 +1,4 @@
-package com.ktable.model;
+package com.ktable.events;
 
 import java.util.Date;
 import java.util.List;

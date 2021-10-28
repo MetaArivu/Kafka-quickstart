@@ -8,8 +8,8 @@ import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.stereotype.Service;
 
-import com.ktable.model.Customer;
-import com.ktable.model.OrderDetails;
+import com.ktable.events.Customer;
+import com.ktable.events.OrderDetails;
 
 import lombok.extern.log4j.Log4j2;
 
