@@ -1,5 +1,8 @@
 package com.streams.events;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class Order {
 
 	private String orderId;
@@ -31,8 +34,26 @@ public class Order {
 		this.total = total;
 	}
 
+	public static Order parse(String str) {
+		try {
+			return new ObjectMapper().readValue(str, Order.class);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public String toJson() {
+		try {
+			return new ObjectMapper().writeValueAsString(this);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+			return "Error=" + e.getMessage();
+		}
+	}
+
 	@Override
 	public String toString() {
-		return this.orderId + "|" + this.total;
+		return toJson();
 	}
 }

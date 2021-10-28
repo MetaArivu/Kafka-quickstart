@@ -9,8 +9,8 @@ import com.streams.events.Order;
 public interface OrderBinder {
 
 	@Input("order-input-channel")
-	public KStream<String, Order> orderInputStream();
+	public KStream<String, String> orderInputStream();
 
 	@Output("order-output-channel")
-	public KStream<String, Order> orderOutPutStream();
+	public KStream<String, String> orderOutPutStream();
 }

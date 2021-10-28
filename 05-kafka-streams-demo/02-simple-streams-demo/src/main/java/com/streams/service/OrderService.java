@@ -18,12 +18,16 @@ public class OrderService {
 
 	@StreamListener(value = "order-input-channel")
     @SendTo("order-output-channel")
-    public KStream<String, Order> process(KStream<String, Order> input) {
+    public KStream<String, String> process(KStream<String, String> input) {
 
-        KStream<String, Order> orderStream = input
-                .mapValues(ord -> new Order(ord.getOrderId(), (ord.getTotal()) + (ord.getTotal()/10)));
+        KStream<String, String> orderStream = input
+        		.peek((k, v) -> log.info("Data Received Key={}, Value={}",k,v))
+                .mapValues(_ord -> {
+                	Order ord = Order.parse(_ord);
+                	return new Order(ord.getOrderId(), (ord.getTotal()) + (ord.getTotal()/10)).toJson();
+                });
 
-        orderStream.foreach((k, v) -> log.info("Key={}, Value={}",k,v));
+        orderStream.foreach((k, v) -> log.info("Data Streamed Key={}, Value={}",k,v));
 
         return orderStream;
     }

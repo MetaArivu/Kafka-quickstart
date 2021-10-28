@@ -8,15 +8,9 @@ spring:
           destination: order-output-topic
       kafka:
         binder:
-          brokers:  localhost:9095
+          brokers:  localhost:9092
           configuration:
             schema.registry.url: http://localhost:8081            
-        bindings:
-          order-input-channel:
-            consumer:
-              valueSerde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
-          order-output-channel:
-            producer:
-              valueSerde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
+       
 
 
