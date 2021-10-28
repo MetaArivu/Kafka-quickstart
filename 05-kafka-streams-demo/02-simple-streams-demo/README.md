@@ -9,7 +9,7 @@ For demo we will consume order data which consist of TOTAL amount, based on TOTA
   - kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic order-output-topic
 
 - Start the application
-  - mvn spring:boot:run
+  - mvn spring-boot:run
 
 - Produce data on order-input-topic topic
   - kafka-console-producer --broker-list localhost:9092 --topic order-input-topic --property parse.key=true --property key.separator=":"
