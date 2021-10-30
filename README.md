@@ -28,7 +28,7 @@ This Deemo Focus on following features
 ## 4: [Schema Registry & AVRO](https://github.com/MetaArivu/spring-kaka-examples/tree/main/schema-registry-with-avro)
 This section focus on how to enable usage of Confluent Schema Registry and Avro serialization format in your Spring Boot applications.
 
-## 5: [KStream](https://github.com/MetaArivu/spring-kaka-examples/tree/main/05-kafka-streams-demohttps://github.com/MetaArivu/spring-kaka-examples/tree/main/05-kafka-streams-demo)
+## 5: [KStream](https://github.com/MetaArivu/spring-kaka-examples/tree/main/05-kafka-streams-demo)
 This section focus on how to use KStream
 - 1 Working with KStream
 - 2 Implementing Exactly Once Pattern
