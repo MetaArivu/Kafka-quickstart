@@ -1,6 +1,6 @@
 # KAFKA AWS Setup
 
-- As we are going to have 3 broker setup we will create 3 similar instance as zookeeper
+- As we are going to have 3 broker setup we will create 3 similar instance as we created for zookeeper
 
 - Create 3 EBS volume and attache to above instance respectively
 
