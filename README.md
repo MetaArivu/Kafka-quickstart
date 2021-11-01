@@ -48,7 +48,8 @@ This section focus on how to use KTable
 ## 7: [CQRS and EventSourcing](https://github.com/MetaArivu/spring-kaka-examples/tree/main/07-shopping-cart-cqrs-es)
 This section focus on implementing Event Sourcing & CQRS using Kafka KStream & KTable. Here we have build small Shopping Cart Service functionality. 
 
-
+## 8: [Kafka Cluster Setup](https://github.com/MetaArivu/Kafka-examples/tree/main/08-cluster-setup)
+This section focus on setting Kafka Cluster Setup. In this demo we will focus on setting 3 zookeeper with 3 broker setup.
 
 ## License  
 
