@@ -22,8 +22,11 @@
     - nc -vz localhost 9092
     - look at the server logs "tail -f /home/ubuntu/kafka/logs/server.log"
 
+- Repeat above steps on 2 other instance
+
 - Once all the broker are started login to Zookeeper Navvigator, you will be able to see new kafka configuration folder as below
     - <img width="1679" alt="Screen Shot 2021-11-01 at 4 18 49 PM" src="https://user-images.githubusercontent.com/23295769/139660361-513e0598-2945-44b4-9d82-afdd94caf2f6.png">
+
 
 
 

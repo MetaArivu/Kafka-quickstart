@@ -1,6 +1,8 @@
-# Zookeeper
+# Kafka & Zookeeper 
 
-## It provides various features for various distrubuted Application like
+## Zookeeper
+
+### It provides various features for various distrubuted Application like
 - Distributed Configuration
 - Self election
 - Coordination
@@ -11,16 +13,16 @@
     - zNode has path
     - zNode can be watched for changes
 
-## Roles
+### Roles
 - Every broker rregister itself by sending heartbeats
 - Maintains the list of Topic along with other Topic details like Partitions, Replication factor etc
 - Election of leader if one broker goes down
 - Stores the Kafka Cluster-Id
 
-## Zookeeper Quorum Sizing, No of zookeeper server 2N+1 (1,3,5,7..). Ideally 3 should be good.
+### Zookeeper Quorum Sizing, No of zookeeper server 2N+1 (1,3,5,7..). Ideally 3 should be good.
 
 
-## Zookeeper Performance
+### Zookeeper/Kafka Performance
 - Use FAST Disk e.g SSD
 - No RAM Swap
 - Set Snapshot and Log on seperate Disk
