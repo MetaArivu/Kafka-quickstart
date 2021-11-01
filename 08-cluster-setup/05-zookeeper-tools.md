@@ -27,7 +27,7 @@ echo "172.31.9.1 kafka1
 
 - Once it started get instance publich IP and access the ZooNavigator
     - http://13.233.59.6:8001/
-    - enter zookeeper1:2181, zookeeper3:2181 in connection string
+    - enter "zookeeper1:2181,zookeeper3:2181" in connection string and proceed
     - Once you are in editor u can login and see the nodes which are conneted to zookeeper
-
+    - <img width="1680" alt="Screen Shot 2021-11-01 at 3 27 58 PM" src="https://user-images.githubusercontent.com/23295769/139654554-55040a16-3f7c-49c5-8f10-6d6b97dd3f4d.png">
 
