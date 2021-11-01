@@ -5,20 +5,20 @@
 
 - "reboot" machine soo above configuration is pickedup
 
-- copy kafka-server.properties from repo in  ~/kafka/config/server.properties
+- Copy kafka-server.properties from repo in  ~/kafka/config/server.properties
     - change advertise hostname and id accordingly on server
 
-- configure kafka as service
+- Configure kafka as service
     - sudo nano /etc/init.d/kafka
     - copy the content from "kafka-service"
     - sudo chmod +x /etc/init.d/kafka
     - sudo chown root:root /etc/init.d/kafka
     - sudo update-rc.d kafka defaults
 
-- start kafka
+- Start kafka
     - sudo service kafka start
 
-- verify it's working
+- Verify it's working
     - nc -vz localhost 9092
     - look at the server logs "tail -f /home/ubuntu/kafka/logs/server.log"
 
