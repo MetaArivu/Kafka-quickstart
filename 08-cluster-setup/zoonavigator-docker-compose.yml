@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  # https://github.com/elkozmon/zoonavigator
+  web:
+    image: elkozmon/zoonavigator-web:latest
+    container_name: zoonavigator-web
+    network_mode: host
+    environment:
+      API_HOST: "localhost"
+      API_PORT: 9001
+      SERVER_HTTP_PORT: 8001
+    depends_on:
+     - api
+    restart: always
+  api:
+    image: elkozmon/zoonavigator-api:latest
+    container_name: zoonavigator-api
+    network_mode: host
+    environment:
+      SERVER_HTTP_PORT: 9001
+    restart: always
