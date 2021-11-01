@@ -11,7 +11,7 @@
 
  - On storage section deselect "Delete on termission"
 
- - Create new security group with followin details
+ - Create new security group with following details
     -   <img width="1674" alt="Screen Shot 2021-11-01 at 12 56 26 PM" src="https://user-images.githubusercontent.com/23295769/139636442-e97d382e-4fd6-4977-9873-2d2d516e64b2.png">
 
 - Launch the instances
