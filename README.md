@@ -28,7 +28,11 @@ This Deemo Focus on following features
 ## 4: [Schema Registry & AVRO](https://github.com/MetaArivu/spring-kaka-examples/tree/main/04-schema-registry-with-avro)
 This section focus on how to enable usage of Confluent Schema Registry and Avro serialization format in your Spring Boot applications.
 
-## 5: [KStream](https://github.com/MetaArivu/spring-kaka-examples/tree/main/05-kafka-streams-demo)
+## 5: KStream & KTable
+
+<img width="1127" alt="screen shot 2018-05-18 at 10 47 07 am" src="https://user-images.githubusercontent.com/23295769/40217157-e59d4812-5a88-11e8-8f9f-dc7ab0d04930.png">
+
+## 5.1: [KStream](https://github.com/MetaArivu/spring-kaka-examples/tree/main/05-kafka-streams-demo)
 This section focus on how to use KStream
 - 1 Working with KStream
 - 2 Implementing Exactly Once Pattern
@@ -38,17 +42,19 @@ This section focus on how to use KStream
 - 6 Aggregation
 - 7 Joining KStreams and Global Table
 
-## 6: [KTable](https://github.com/MetaArivu/spring-kaka-examples/tree/main/06-kafka-ktable-demo)
+## 5.2: [KTable](https://github.com/MetaArivu/spring-kaka-examples/tree/main/06-kafka-ktable-demo)
 This section focus on how to use KTable
 - 1 Working with Ktable
 - 2 Aggregation
 - 3 Reducing
 - 4 Global Table
 
-## 7: [CQRS and EventSourcing](https://github.com/MetaArivu/spring-kaka-examples/tree/main/07-shopping-cart-cqrs-es)
+## 6: [CQRS and EventSourcing](https://github.com/MetaArivu/spring-kaka-examples/tree/main/07-shopping-cart-cqrs-es)
 This section focus on implementing Event Sourcing & CQRS using Kafka KStream & KTable. Here we have build small Shopping Cart Service functionality. 
 
-## 8: [Kafka Cluster Setup](https://github.com/MetaArivu/Kafka-examples/tree/main/08-cluster-setup)
+![WhatsApp Image 2021-10-28 at 4 16 30 PM](https://user-images.githubusercontent.com/23295769/139241202-d8ef26b8-86f6-484a-908b-038fda1a70fd.jpeg)
+
+## 7: [Kafka Cluster Setup](https://github.com/MetaArivu/Kafka-examples/tree/main/08-cluster-setup)
 This section focus on setting Kafka Cluster Setup. In this demo we will focus on setting 3 zookeeper with 3 broker setup.
 
 ## License  
