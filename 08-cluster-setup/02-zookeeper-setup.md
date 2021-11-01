@@ -24,7 +24,7 @@
 
 - Install Zookeeper boot scripts
     - sudo nano /etc/init.d/zookeeper
-    - copy content from zookeeper-service and save it
+    - copy content from [zookeeper-service](https://github.com/MetaArivu/Kafka-examples/blob/main/08-cluster-setup/zookeeper-service) and save it
     - sudo chmod +x /etc/init.d/zookeeper
     - sudo chown root:root /etc/init.d/zookeeper
     - sudo update-rc.d zookeeper defaults
