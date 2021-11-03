@@ -13,7 +13,7 @@ We will setup below Kafka Architecture
 - Kafka Broker Setup, [Link](https://github.com/MetaArivu/Kafka-quickstart/blob/main/08-cluster-setup/06-kafka-broker-setup.md)
 - Testing Kafka, [Link](https://github.com/MetaArivu/Kafka-quickstart/blob/main/08-cluster-setup/07-testing-kafka-cluster.md)
 - Administrative Tools, [Link](https://github.com/MetaArivu/Kafka-quickstart/blob/main/08-cluster-setup/08-administrative-tools.md)
-
+- Monitoring Tools, [Link](https://github.com/MetaArivu/Kafka-quickstart/blob/main/08-cluster-setup/09-monitoring-tools.md)
 
 ## While setting Zookeeper & Kafka consider below steps
 
