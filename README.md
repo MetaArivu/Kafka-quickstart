@@ -55,10 +55,14 @@ This section focus on implementing Event Sourcing & CQRS using Kafka KStream & K
 
 ![WhatsApp Image 2021-10-28 at 4 16 30 PM](https://user-images.githubusercontent.com/23295769/139241202-d8ef26b8-86f6-484a-908b-038fda1a70fd.jpeg)
 
-## 7: [Kafka Cluster Setup](https://github.com/MetaArivu/Kafka-examples/tree/main/08-cluster-setup)
+## 7: [Kafka Cluster Setup & Monitoring](https://github.com/MetaArivu/Kafka-examples/tree/main/08-cluster-setup)
 This section focus on setting Kafka Cluster Setup. In this demo we will focus on setting 3 zookeeper with 3 broker setup.
 
 ![WhatsApp Image 2021-11-03 at 10 52 44 AM](https://user-images.githubusercontent.com/23295769/140013322-c9720806-d1a8-429e-9793-d94cc468385e.jpeg)
+
+<img width="1676" alt="Screen Shot 2021-11-03 at 3 58 02 PM" src="https://user-images.githubusercontent.com/23295769/140044753-02b47885-1340-49a3-80b2-d8f37a9bb132.png">
+
+<img width="1626" alt="Screen Shot 2021-11-03 at 1 20 14 PM" src="https://user-images.githubusercontent.com/23295769/140025386-8eac06d9-b45d-4666-a038-e376b569b0da.png">
 
 
 ## License  
