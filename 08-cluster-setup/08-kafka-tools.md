@@ -1,5 +1,11 @@
 # Kafka Tools
 
+## Install Monitor Tools
+- [Zoo Navigator](https://hub.docker.com/r/elkozmon/zoonavigator)
+- [Kafka Manager](https://github.com/yahoo/CMAK) OR [Here](https://hub.docker.com/r/hlebalbau/kafka-manager/)
+- [Kafka Monitor](https://github.com/linkedin/kafka-monitor)
+
+## Steps
 - nano kafka-topics-ui-docker-compose.yml
 - docker-compose -f  kafka-topics-ui-docker-compose.yml up -d
 - public ip:8000
