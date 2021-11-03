@@ -1,5 +1,9 @@
 # Kafka & Zookeeper 
 
+## Kafka Setup Architecture
+
+![WhatsApp Image 2021-11-03 at 10 52 44 AM](https://user-images.githubusercontent.com/23295769/140013322-c9720806-d1a8-429e-9793-d94cc468385e.jpeg)
+
 ## Zookeeper
 
 ### It provides various features for various distrubuted Application like
