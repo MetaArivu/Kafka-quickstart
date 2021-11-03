@@ -10,7 +10,7 @@
 
 - Configure kafka as service
     - sudo nano /etc/init.d/kafka
-    - copy the content from "kafka-service"
+    - copy the content from [kafka-service](https://github.com/MetaArivu/Kafka-examples/blob/main/08-cluster-setup/kafka-service)
     - sudo chmod +x /etc/init.d/kafka
     - sudo chown root:root /etc/init.d/kafka
     - sudo update-rc.d kafka defaults

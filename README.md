@@ -30,7 +30,8 @@ This section focus on how to enable usage of Confluent Schema Registry and Avro 
 
 ## 5: KStream & KTable
 
-<img width="1127" alt="screen shot 2018-05-18 at 10 47 07 am" src="https://user-images.githubusercontent.com/23295769/40217157-e59d4812-5a88-11e8-8f9f-dc7ab0d04930.png">
+<img width="1009" alt="Screen Shot 2021-11-01 at 11 42 07 PM" src="https://user-images.githubusercontent.com/23295769/139720133-89848b21-2197-427a-b82a-01425ca1ed83.png">
+
 
 ## 5.1: [KStream](https://github.com/MetaArivu/spring-kaka-examples/tree/main/05-kafka-streams-demo)
 This section focus on how to use KStream

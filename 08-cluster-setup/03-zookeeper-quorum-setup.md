@@ -1,6 +1,6 @@
 # Zookeeper Quorum Setup
 
-- Create the AMI image of insatance which is created in previious step (03-zookeeper-setup.md)
+- Create the AMI image of insatance which is created in previous step (03-zookeeper-setup.md)
 
 - Follow similar steps as 02-aws-setup.md only assign below private IP
     - 172.31.25.20 for **-1a subnet
@@ -18,7 +18,7 @@
     - sudo service zookeeper stop
 
 - Configure the zookeeper
-    - Copy Zookeeper config file from repo, it has required configuration
+    - Copy Zookeeper config file from [here](https://github.com/MetaArivu/Kafka-examples/blob/main/08-cluster-setup/zookeeper.properties), it has required configuration
     - Start the zookeeper & check it is properly started
 
 
