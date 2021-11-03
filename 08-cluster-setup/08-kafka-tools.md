@@ -6,7 +6,7 @@
 - [Kafka Monitor](https://github.com/linkedin/kafka-monitor)
 
 ## Steps
-- nano kafka-topics-ui-docker-compose.yml
+- nano kafka-topics-ui-docker-compose.yml, copy content into this from [here](https://github.com/MetaArivu/Kafka-quickstart/blob/main/08-cluster-setup/kafka-topics-ui-docker-compose.yml). Make sure you have updated the IP address with your Admin Server public address..
 - docker-compose -f  kafka-topics-ui-docker-compose.yml up -d
 - public ip:8000
 - nano kafka-manager-docker-compose.yml
