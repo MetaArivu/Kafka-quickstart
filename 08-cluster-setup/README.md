@@ -14,6 +14,7 @@ We will setup below Kafka Architecture
 - Testing Kafka, [Link](https://github.com/MetaArivu/Kafka-quickstart/blob/main/08-cluster-setup/07-testing-kafka-cluster.md)
 - Administrative Tools, [Link](https://github.com/MetaArivu/Kafka-quickstart/blob/main/08-cluster-setup/08-administrative-tools.md)
 
+
 ## While setting Zookeeper & Kafka consider below steps
 
 ## Zookeeper
