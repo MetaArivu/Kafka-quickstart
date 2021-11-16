@@ -15,7 +15,6 @@ We will setup below Kafka Architecture
 - Administrative Tools, [Link](https://github.com/MetaArivu/Kafka-quickstart/blob/main/08-cluster-setup/08-administrative-tools.md)
 - Monitoring Tools, [Link](https://github.com/MetaArivu/Kafka-quickstart/blob/main/08-cluster-setup/09-monitoring-tools.md)
 
-## While setting Zookeeper & Kafka consider below steps
 
 ## Zookeeper
 
