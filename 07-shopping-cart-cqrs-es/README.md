@@ -2,10 +2,16 @@
 
 This section focus on implementing Event Sourcing & CQRS using Kafka KStream & KTable. 
 
-Here we have build small Shopping Cart Service functionality, it will be divided in 3 modules
-- 1 - Shopping Cart Write API, this API's are called by user when he adds, remove to cart or checkout carts. Based on API called ITEM ADDED, ITEM REMOVED or CHECKOUT event will be published to KAFKA on cart-event topic.
-- 2 - Shopping Cart Aggregator, this module uses KSTREAM and GLOBALTABLE. It will consume all the events from cart-event and aggregate it, once done new state will be generted and push to another topic.
-- 3 - Shopping CART Read API, this API reads the data READ DB and shows latest state of User Cart.
+
+
+- Shopping Cart Command Service. 
+	- This API's are called by user when he adds, remove to cart or checkout carts. Based on API called ITEM ADDED, ITEM REMOVED or CHECKOUT event will be published to KAFKA on cart-event topic.
+- Shopping Cart Enrich Service. 
+	- This will enrich the event with Product Name and Actual Unit Price for that product.
+- Shopping Cart Aggregator Service. 
+	- This module uses KSTREAM and GLOBALTABLE. It will consume all the events from cart-event and aggregate it, once done new state will be generted and push to another topic.
+- Shopping CART Query Service. 
+	- This API reads the data reads and shows latest state of User Cart.
 
 ![WhatsApp Image 2021-10-28 at 4 16 30 PM](https://user-images.githubusercontent.com/23295769/139241202-d8ef26b8-86f6-484a-908b-038fda1a70fd.jpeg)
 
