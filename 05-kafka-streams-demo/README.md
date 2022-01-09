@@ -11,6 +11,7 @@ Usefull Resource
 - https://docs.confluent.io/platform/current/streams/quickstart.html#streams-quickstart
 - https://docs.spring.io/spring-cloud-stream-binder-kafka/docs/3.1.4/reference/html/spring-cloud-stream-binder-kafka.html#_kafka_streams_binder
 - https://www.baeldung.com/java-kafka-streams-vs-kafka-consumer
+- https://itnext.io/how-to-use-kubernetes-to-deploy-stateful-kafka-streams-applications-872c77f03c3a
 
 Kafka Streams is standard Java Library used for data processing and transformation within Kafka. 
 
